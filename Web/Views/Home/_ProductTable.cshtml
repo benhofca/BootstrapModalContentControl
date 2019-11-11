@@ -1,0 +1,29 @@
+﻿@using Data
+@using Web.Models
+@model List<Product>
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>@Resources.Models.Product.LABEL_SKU</th>
+            <th>@Resources.Models.Product.LABEL_NAME</th>
+            <th>@Resources.Models.Product.LABEL_DESCRIPTION</th>
+            <th>@Resources.Models.Product.LABEL_PRICE</th>
+            <th>@Resources.Common.OPTIONS</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Product product in Model)
+        {
+            <tr>
+                <td>@product.Sku</td>
+                <td>@product.Name</td>
+                <td>@product.Description</td>
+                <td>@product.Price</td>
+                <td>
+                    @Html.DynamicModalButton(@product.Id.ToString(), "EditProduct", Resources.Common.EDIT, ButtonType.LinkBadge, BootstrapContext.Primary, "#productlist", "text-light")
+                    @Html.StaticModalButton(@product.Id.ToString(), "DeleteProduct", Resources.Common.DELETE, ButtonType.LinkBadge, BootstrapContext.Danger, "#productlist", "text-light")
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

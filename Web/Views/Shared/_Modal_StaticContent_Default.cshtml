@@ -1,0 +1,8 @@
+﻿@using Web.Models
+@model StaticModalDisplay
+
+<div class="form-group">
+    <div class="alert alert-@(Model.ButtonStyle) text-dark fade show" role="alert">
+        @Html.Raw(Model.Dialog)
+    </div>
+</div>

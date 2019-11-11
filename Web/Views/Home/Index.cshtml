@@ -1,0 +1,67 @@
+﻿@using Web.Models
+@using Data
+@using Resources
+@model HomeIndexViewModel
+@{
+    ViewBag.Title = Resources.Titles.HOME;
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-12">
+                <h2>@Resources.Titles.STATIC_CONTENT</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                @Resources.Content.STATIC_CONTENT
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                @Html.StaticModalButton("0", "Basic", Resources.Common.BASIC, ButtonType.Button, BootstrapContext.Success)
+                @Html.StaticModalButton("0", "SubmitDemo", Resources.Models.SubmitDemo.SINGULAR, ButtonType.Button, BootstrapContext.Success)
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-12">
+                <h2>@Resources.Titles.DYNAMIC_CONTENT</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                @Resources.Content.DYNAMIC_CONTENT
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h3>@Resources.Models.Product.SINGULAR</h3>
+                @Html.DynamicModalButton("0", "EditProduct", Resources.Common.NEW, ButtonType.Button, BootstrapContext.Primary, "#productlist")
+                <div id="productlist">
+                    @Html.Partial("_ProductTable", Model.Products)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section jumbotron
+{
+    <div class="jumbotron">
+        <h1>@Resources.Titles.APPLICATION</h1>
+        <p class="lead">@Html.Raw(Resources.Content.INTRO)</p>
+    </div>
+}
+@section modals
+{
+    @Html.Partial("_Modal_DynamicContent") @*Only use one Dynamic Modal per page*@
+    @Html.Partial("_Modal_StaticContent", new StaticModalDisplay { Action = "Basic", Title = Resources.Common.BASIC, Dialog = Resources.Models.Basic.BASIC_MESSAGE, ButtonStyle = BootstrapContext.Primary, ButtonText = Resources.Common.YES })
+    @Html.Partial("_Modal_StaticContent", new StaticModalDisplay { Action = "SubmitDemo", Title = Resources.Titles.SUBMIT_DEMO, PartialView = "_Modal_StaticContent_SubmitDemo", PartialModel = new SubmitDemoModel(), ButtonStyle = BootstrapContext.Primary, ButtonText = Resources.Common.SUBMIT })
+    @Html.Partial("_Modal_StaticContent", new StaticModalDisplay { Action = "DeleteProduct", Title = Resources.Models.Product.SINGULAR, Dialog = Resources.Models.Product.CONFIRM_DELETE, ButtonStyle = BootstrapContext.Danger, ButtonText = Resources.Common.DELETE })
+}
+@section scripts
+{
+    <script src="~/Scripts/ModalContentScript.js"></script>
+}

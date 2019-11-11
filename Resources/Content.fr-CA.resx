@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DYMANIC_CONTENT" xml:space="preserve">
+    <value>Le contenu dynamique, tel qu'un formulaire, peut changer par élément associé à l'élément appelant.
+Le contenu dynamique est récupéré lors d'un événement ouvert modal. L'événement fait une demande Ajax avec un identifiant et un type d'action. Le MAAction détermine la vue partielle et le modèle, le MAId est l'identifiant unique.</value>
+  </data>
+  <data name="INTRO" xml:space="preserve">
+    <value>Ce projet illustre un composant conçu pour un client qui exploite un site Web bilingue. Nécessitant une solution polyvalente mais uniforme, le résultat final constitue un ajout élégant aux plates-formes ASP.NET et Bootstrap4.&lt;h3&gt;Composants&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;ASP.NET&lt;/li&gt;&lt;li&gt;.NET Framework 4.6&lt;/li&gt;&lt;li&gt;Razor 3.2&lt;/li&gt;&lt;li&gt;Entity Framework 6.3&lt;/li&gt;&lt;li&gt;Bootstrap 4.3&lt;/li&gt;&lt;li&gt;JQuery 3.4 &amp; Ajax&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Problème&lt;/h3&gt;Le site Web gère le contenu bilingue au moyen de fichiers de ressources. Le contenu en anglais, français et espagnol est stocké dans des fichiers correspondants avec des fichiers en anglais par défaut, les autres étant identifiés par un suffixe «.fr-Ca» ou «.es-Us» en conséquence. La définition d'une culture via CultureInfo sur l'une de ces langues détermine le fichier de ressources utilisé. Bien que cette configuration fonctionne parfaitement pour les pages rendues telles que Razor, les fichiers statiques tels que Javascript ne peuvent pas extraire le contenu des fichiers de ressources.Le projet avait initialement abordé ce problème dans diverses implémentations délicates, telles que la définition de variables JavaScript globales dans Razor ou via l'appel Ajax sur document prêt. Destinées à utiliser le contenu de variable global dans les alertes, les confirmations et diverses formes modales, ces méthodes de récupération de contenu bilingue étaient indéchiffrables, disgracieuses et inappropriées pour un projet destiné à des déploiements à plus grande échelle.&lt;h3&gt;Solution&lt;/h3&gt;Deux méthodes de récupération de contenu bilingue, Static Content et Dynamic Content, extraient le contenu des fichiers de ressources au chargement ou à la demande, et présentent ce contenu dans des éléments modaux appropriés. Chaque élément modal est soumis via un script standard et une convention de dénomination cohérente.</value>
+  </data>
+  <data name="STATIC_CONTENT" xml:space="preserve">
+    <value>Le contenu statique, tel que les alertes et les messages de confirmation, ne change pas entre les chargements de page.
+Le contenu statique est récupéré dans le rendu Razor lors de la demande et affiché via les modaux Bootstrap.</value>
+  </data>
+  <data name="WILL_NOT_REDIRECT" xml:space="preserve">
+    <value>La page ne sera pas redirigée si elle est vide</value>
+  </data>
+  <data name="WILL_OVERWRITE_BODY" xml:space="preserve">
+    <value>Le corps modal sera écrasé</value>
+  </data>
+  <data name="WILL_OVERWRITE_TITLE" xml:space="preserve">
+    <value>Le titre modal sera écrasé</value>
+  </data>
+</root>

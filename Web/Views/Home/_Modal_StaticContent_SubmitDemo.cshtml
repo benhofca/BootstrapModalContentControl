@@ -1,0 +1,70 @@
+﻿@using Web.Models
+@model SubmitDemoModel
+
+<div class="card">
+    <div class="card-body">
+        <div class="form-group">
+            <div class="form-check">
+                @Html.CheckBoxFor(m => m.ReloadPage, new { @class = "form-check-input" })
+                @Html.LabelFor(m => m.ReloadPage, new { @class = "form-check-label" })
+                @Html.ValidationMessageFor(model => model.ReloadPage, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card mt-2">
+    <div class="card-body">
+        <div class="form-group">
+            @Html.LabelFor(m => m.Redirect)
+            @Html.EditorFor(m => m.Redirect, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Redirect, "", new { @class = "text-danger" })
+            <small class="form-text text-muted">@Resources.Content.WILL_NOT_REDIRECT</small>
+        </div>
+    </div>
+</div>
+<div class="card mt-2">
+    <div class="card-body">
+        <div class="form-group">
+            @Html.LabelFor(m => m.UpdateCaller)
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-outline-success active">
+                    <input type="radio" name="UpdateCaller" value="Success" autocomplete="off" checked> @Resources.Models.SubmitDemo.SINGULAR
+                </label>
+                <label class="btn btn-outline-danger">
+                    <input type="radio" name="UpdateCaller" value="Danger" autocomplete="off"> @Resources.Models.SubmitDemo.SINGULAR
+                </label>
+                <label class="btn btn-outline-warning">
+                    <input type="radio" name="UpdateCaller" value="Warning" autocomplete="off"> @Resources.Models.SubmitDemo.SINGULAR
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                @Html.CheckBoxFor(m => m.CloseModal, new { @class = "form-check-input" })
+                @Html.LabelFor(m => m.CloseModal, new { @class = "form-check-label" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.PageMessage)
+            @Html.EditorFor(m => m.PageMessage, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.PageMessage, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Title)
+            @Html.EditorFor(m => m.Title, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            <small class="form-text text-muted">@Resources.Content.WILL_OVERWRITE_TITLE</small>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Body)
+            @Html.EditorFor(m => m.Body, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Body, "", new { @class = "text-danger" })
+            <small class="form-text text-muted">@Resources.Content.WILL_OVERWRITE_BODY</small>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ModalMessage)
+            @Html.EditorFor(m => m.ModalMessage, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.ModalMessage, "", new { @class = "text-danger" })
+        </div>
+    </div>
+</div>
